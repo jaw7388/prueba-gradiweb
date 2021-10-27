@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack serve --open",
     "dev": "webpack --config webpack.config.js",
-    "prod": "webpack --config=webpack.config.prod.js"
+    "prod": "webpack --config=webpack.config.prod.js" 
   },
   "author": "John Alexander Espindola",
   "license": "ISC",
