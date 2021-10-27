@@ -7,7 +7,7 @@
     "start": "webpack serve --open",
     "dev": "webpack --config webpack.config.js",
     "prod": "webpack --config=webpack.config.prod.js",
-    "postinstall": "webpack"
+    //"postinstall": "webpack"
   },
   "author": "John Alexander Espindola",
   "license": "ISC",
