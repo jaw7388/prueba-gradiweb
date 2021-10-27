@@ -16,6 +16,9 @@ module.exports = {
   },
 
   mode: 'development',
+  devServer: {
+    static: './dist',
+  },
  
   module: {
     rules: [
