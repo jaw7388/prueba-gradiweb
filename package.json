@@ -4,9 +4,9 @@
   "description": "Prueba técnica",
   "main": "index.js",
   "scripts": {
-    "start": "webpack serve --open",
-    "dev": "webpack --config webpack.config.js",
-    "build": "webpack --config=webpack.config.prod.js"
+    "start": "node index.js",
+    "build": "webpack --config=webpack.config.prod.js",
+    "dev": "webpack --config webpack.config.js"
     
   },
   "author": "John Alexander Espindola",
