@@ -1,0 +1,12 @@
+@import 'utilities/variables';
+@import 'utilities/mixins';
+@import 'utilities/template';
+
+@import 'pages/home';
+
+
+$theme-colors: (
+  "primary": $primary-color,  
+  "secondary": $second-color,
+);  
+

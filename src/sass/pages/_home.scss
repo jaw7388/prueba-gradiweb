@@ -1,0 +1,465 @@
+html,body{
+    font-family:$font-primary;
+    color: $second-color;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;    
+    @include media(xs){
+        font-size: 14px;
+     }
+     @include media(xxs){
+        font-size: 12px;
+     }
+}
+body{
+
+}
+/* --------------------------------- TEXTOS --------------------------------- */
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
+   font-family: $font-secondary;
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+   color: $primary-color;
+}
+
+.strong{
+    font-family: $font-primary-bold;
+}
+
+h3{
+    font-size: 2rem;
+}
+
+
+p{
+    font-size: 1rem;
+}
+
+a{
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+.title-section{
+    font-size: 3.5rem;
+    color: $primary-color;
+}
+
+
+
+
+/* -------------------------------- SECCIONES ------------------------------- */
+
+
+
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+}
+
+.navbar{
+    padding: 1rem;
+    
+    .brand-logo{
+        img{
+            height: 3rem;
+        }
+    }
+    .right-menu{
+        img{
+            height: 1.5rem;
+        }
+        > div{
+            &:not(:last-child){
+                margin-right: 1.5rem;
+            }
+        }
+    }
+
+}
+
+
+/**
+** Banner
+**/
+
+.banner{
+    display: flex;
+    .banner-left{
+        padding-right: 4rem;
+    }
+    .banner-right{
+    }
+    @include media(xs){
+        flex-direction: column;
+        .banner-left{
+            padding: 0;
+        }
+        .banner-right{
+            padding: 0;
+        }
+        
+    }
+}
+
+.banner-reverse{
+    @include media(xs){
+        flex-direction: column-reverse;
+        
+    }
+}
+
+.img-top-rounded{
+    border-radius: 50% 50% 0 0 ;
+}
+
+
+//banner-categories
+
+.banner-categories{
+    .banner-left,
+    .banner-right{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.footer-middle{
+    h3{
+        font-size: 1.5rem;
+    }
+    .logo-footer{
+        height: 3rem;
+    }
+    .list-rrss{
+        display: flex;
+        a{
+            padding: 0.5rem;
+            line-height:0;
+            border-radius: 50%;
+            &:hover{
+                background-color: $accent-color;
+                svg{
+                    .st1{ fill: #fff; }
+                    .st0{stroke:#fff;}
+                }
+            }
+            svg{
+                height: 2rem;
+            }
+        }
+    }
+    ul{
+        padding: 0;
+        li{
+            list-style: none;
+            &:not(:last-child){
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+    a{
+        color: $second-color;
+        &:hover{
+            color: $accent-color;
+        }
+    }
+    @include media(xs){
+        text-align: center;
+    }
+}
+
+
+.currency-wrapper{
+    position: relative;
+    font-family: $font-secondary;
+    &:hover{
+        .curency-list{
+            display: block;
+        }    
+    }
+    .curency-list{
+        display: none;
+        position: absolute;
+        padding: 0.5rem ;
+        box-shadow: rgb(17 17 26 / 10%) 0px 4px 16px, rgb(17 17 26 / 5%) 0px 8px 32px;
+        .currency-change{
+            cursor: pointer;
+            padding: 10px 0;
+            &:not(:last-child){
+                border-bottom: 1px solid $primary-color;
+            }
+        }
+    }
+}
+
+/* --------------------------------- BOTONES -------------------------------- */
+
+.btn-green{
+    display: inline-flex;
+    padding: 1rem 2.5rem;
+    background-color: $accent-color;
+    font-family: $font-secondary;
+    color: #fff;
+    transition: 0.3s;
+    &:hover{
+        background-color: $primary-color;
+
+    }
+}
+.btn-outline{
+    display: inline-flex;
+    padding: 1rem 2.5rem;
+    //background-color: $accent-color;
+    border: 1px solid $accent-color;
+    font-family: $font-secondary;
+    color: $accent-color;
+    transition: 0.3s;
+    &:hover{
+        background-color: $accent-color;
+        color: #fff;
+    }
+}
+/* --------------------------------- COLORS --------------------------------- */
+
+/* --------------------------------- LISTAS --------------------------------- */
+
+/* -------------------------------- CAROUSEL -------------------------------- */
+
+.carousel{
+    // width: 100%;
+    // height: 600px;
+    // margin: auto;
+    // overflow: hidden;
+    position: relative;
+
+    .carousel-inner{
+        width: 100%;
+        height: 600px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        overflow-x: auto;
+        position: relative;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+
+        .item{
+            min-width: 24%;
+            height: 90%;
+            position: relative;
+            left: 0;
+            text-align: center;
+            padding-top: 60px;
+            margin: 0 20px 0 0;
+            transition: 0.5s;
+            color: $primary-color;
+            img{
+                height: 50%;
+                padding: 10px;
+                display: flex;
+                overflow: hidden;
+                margin: 0 auto 10px;
+                
+            }
+            h3{
+                padding: 0 1rem;
+                font-size: 1rem;
+                font-family: $font-third;
+                font-weight: 300;
+                text-align: left;
+                min-height: 4rem;
+            }
+            .data{
+                display: flex;
+                justify-content: space-between;
+                padding: 0 1rem;
+                .price{
+                    //font-family: $font-third;
+                    font-weight: 800;
+                }
+                .rate{
+                    color: $wellow-color;
+                    font-weight: 800;
+                    display: inline-flex;
+                    align-items: center;
+                    margin-right: 0.5rem;
+                    &:after{
+                        content: "";
+                        background-image: url(../images/icons/icon-star.svg);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        margin-left: 0.5rem;
+                        width: 1rem;
+                        height: 1rem;
+                        display: inline-flex;
+
+                    }
+                }
+                .comments{
+
+                }
+            }
+        }
+       
+    }
+    @media (max-width: 768px) {
+        
+        .carousel-inner{
+            .item { 
+                min-width: 49%;
+                margin:  0 10px  0 0;
+            }
+        } 
+    }
+
+    
+
+    .carousel-button{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 2rem;
+        width: 2rem;
+        background-color: #fff;
+        cursor: pointer;
+        z-index: 1;
+        border-radius: 50%;
+        box-shadow: rgb(17 17 26 / 10%) 0px 4px 16px, rgb(17 17 26 / 5%) 0px 8px 32px;
+
+        &:before{
+            content: "";
+            height: 50%;
+            width: 50%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            right: 0;
+            margin: auto;
+            
+        }
+
+    }
+
+    .button-left{
+        left: 0;
+        &:before{
+            background-image: url(../images/icons/flecha_izq.svg);
+        }
+    }
+    .button-right{
+        right: 0;
+        &:before{
+            background-image: url(../images/icons/flecha_derecha.svg);
+        }
+    }
+}
+/* ---------------------------------- MODAL --------------------------------- */
+
+/* ---------------------------------- ICONS --------------------------------- */
+
+/* ------------------------------ SLIDER SLICK ------------------------------ */
+
+/* ----------------------------- FORMS ----------------------------- */
+
+.newsletter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 1rem;
+    margin: 6rem 0;
+    border-top: 1px solid $second-color;
+    border-bottom: 1px solid $second-color;
+    form{
+        display: flex;
+        [type="radio"]:checked,
+        [type="radio"]:not(:checked) {
+            position: absolute;
+            left: -9999px;
+        }
+        [type="radio"]:checked + label,
+        [type="radio"]:not(:checked) + label
+        {
+            position: relative;
+            padding-left: 28px;
+            cursor: pointer;
+            line-height: 20px;
+            display: inline-block;
+            color: #666;
+        }
+        [type="radio"]:checked + label:before,
+        [type="radio"]:not(:checked) + label:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 18px;
+            height: 18px;
+            border: 1px solid #ddd;
+            border-radius: 100%;
+            background: #fff;
+        }
+        [type="radio"]:checked + label:after,
+        [type="radio"]:not(:checked) + label:after {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background: $accent-color;
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            border-radius: 100%;
+            -webkit-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+        }
+        [type="radio"]:not(:checked) + label:after {
+            opacity: 0;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+        [type="radio"]:checked + label:after {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+
+        input[type=text]{
+            width: 25rem;
+            border: 1px solid $second-color;
+            font-family: $font-secondary;
+            padding-left: 1rem;
+        }
+        input[type=submit]{
+            padding: 2rem;
+            border: 1px solid $second-color;
+            background-color: $accent-color;
+            color: #fff;
+            font-family: $font-secondary;
+        }
+    }
+    @include media(xs){
+        flex-direction: column;
+        form{
+            flex-direction: column;
+            input[type=text]{
+                width: 60%;
+            }
+            input[type=submit]{
+                width: 40%;
+            }
+        }
+    }
+
+}
+
+// ACCORDION ===================================================================

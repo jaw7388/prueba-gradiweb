@@ -1,0 +1,27 @@
+{
+  "name": "prueba",
+  "version": "1.0.0",
+  "description": "Prueba técnica",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "prod": "webpack --config=webpack.config.prod.js"
+  },
+  "author": "John Alexander Espindola",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "autoprefixer": "^10.3.7",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.4.0",
+    "cssnano": "^5.0.8",
+    "file-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^2.4.3",
+    "postcss-loader": "^6.2.0",
+    "sass": "^1.43.3",
+    "sass-loader": "^12.2.0",
+    "webpack": "^5.59.1",
+    "webpack-cli": "^4.9.1"
+  }
+}
