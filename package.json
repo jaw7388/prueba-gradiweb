@@ -6,8 +6,8 @@
   "scripts": {
     "start": "webpack serve --open",
     "dev": "webpack --config webpack.config.js",
-    "prod": "webpack --config=webpack.config.prod.js" ,
-    "heroku-prebuild": "npm install --dev"
+    "build": "webpack --config=webpack.config.prod.js"
+    
   },
   "author": "John Alexander Espindola",
   "license": "ISC",
